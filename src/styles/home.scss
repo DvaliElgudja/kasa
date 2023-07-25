@@ -1,0 +1,67 @@
+@import './base.scss';
+
+.home__banner {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   margin-bottom: 4%;
+}
+.home__banner__img {
+   width: 86vw;
+   position: relative;
+}
+.home__banner img {
+   object-fit: cover;
+   height: 100%;
+   width: 100%;
+}
+.home__banner__text__container {
+   position: absolute;
+   text-align: center;
+   width: 100%;
+}
+.home__banner__text__container__h2 {
+   position: absolute;
+   top: 65%;
+   left: 52%;
+   transform: translate(-50%, 135%);
+   color: $color-secondary;
+}
+
+.home {
+   display: grid;
+   justify-items: center;
+}
+.home__gallery {
+   width: 86vw;
+}
+
+.home__gallery-grid {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   background-color: $color-collapse-txt-background;
+   border-radius: 25px;
+}
+.home__gallery-grid__img {
+   width: 100%;
+}
+
+figure {
+   background-color: $color-primary;
+   color: $color-secondary;
+   border-radius: 5px;
+   position: relative;
+   height: 80%;
+}
+figure img {
+   border-radius: 5px;
+   object-fit: cover;
+   height: 100%;
+   width: 100%;
+}
+figcaption {
+   position: absolute;
+   bottom: 5%;
+   left: 5%;
+   right: 0;
+}

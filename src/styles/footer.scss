@@ -1,0 +1,25 @@
+@import './base.scss';
+footer {
+   background-color: black;
+   color: $color-secondary;
+   height: 209px;
+}
+.footer__container {
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 20%;
+   flex-direction: column;
+}
+.footer__container__text {
+   display: flex;
+   flex-direction: row;
+   gap: 5px;
+   font-size: 1.5em;
+   margin-bottom: -20px;
+   padding: 0%;
+}
+.footer__container__text h4 {
+   margin: 0%;
+}

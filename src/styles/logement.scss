@@ -1,0 +1,153 @@
+@import './base.scss';
+
+.logement {
+   width: 100%;
+   display: grid;
+   justify-items: center;
+   margin-bottom: 4%;
+}
+// Carousell
+.logement__carousel {
+   position: relative;
+   height: 415px;
+   width: 86vw;
+}
+.logement__carousel__img {
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+   margin-left: auto;
+   margin-right: auto;
+   border-radius: 25px;
+}
+
+.arrow-left {
+   position: absolute;
+   left: 104px;
+   transform: rotate(180deg);
+   cursor: pointer;
+   top: 50%;
+   left: 1.5vw;
+}
+.arrow-right {
+   position: absolute;
+   right: 20%;
+   cursor: pointer;
+   top: 50%;
+   right: 1.5vw;
+}
+
+.logement__carousel__index {
+   position: absolute;
+   color: #fff;
+   bottom: 1.5vh;
+   left: 50%;
+}
+// end carousel start text
+.logement__container {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   width: 86vw;
+   color: $color-primary;
+   margin-top: 2%;
+}
+
+.logement__container__header {
+   display: flex;
+   flex-direction: column;
+   width: 44.097vw;
+}
+.logement__container__header__title h2 {
+   font-size: 2.25vw;
+}
+.logement__container__header__title h3 {
+   font-size: 1.25vw;
+}
+
+.logement__container__header__tags {
+   display: flex;
+   flex-direction: row;
+   gap: 4%;
+   padding: 0;
+   width: 25.347vw;
+}
+.logement__container__header__tags__li {
+   list-style-type: none;
+   background-color: $color-primary;
+   border-radius: 10px;
+   color: #fff;
+   padding: 5px;
+   padding-left: 8px;
+   padding-right: 8px;
+   font-size: 0.972vw;
+}
+
+.logement__container__aside {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+}
+.logement__container__aside__profile {
+   display: flex;
+   flex-direction: row;
+   height: 63px;
+   // gap: 5%;
+}
+.logement__container__aside__profile__h3 {
+   width: 6.4vw;
+   font-size: 18px;
+}
+.logement__container__aside__profile__h3 h3 {
+   margin-top: 0;
+}
+.logement__container__aside__profile img {
+   height: 100%;
+}
+.logement__container__aside__profile img {
+   border-radius: 50%;
+   width: 4.444vw;
+   height: 4.444vw;
+}
+.logement__container__aside__star__container {
+   list-style-type: none;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   width: 13.611vw;
+}
+.logement__container__aside__star__container li {
+   display: flex;
+   align-self: center;
+}
+.starActive {
+   // height: 36px;
+   object-fit: cover;
+}
+// .starActive img {
+//       height: 36px;
+//    object-fit: cover;
+// }
+.starDisabled {
+   margin-right: 3%;
+}
+//end aside
+
+// collapse
+.logement__collapse {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   width: 86vw;
+}
+.logement__collapse__description {
+   width: 40.417vw;
+}
+.logement__collapse__equipement {
+   width: 40.417vw;
+   display: flex;
+   flex-direction: column;
+}
+.logement__collapse__equipement__ul {
+   list-style-type: none;
+}
