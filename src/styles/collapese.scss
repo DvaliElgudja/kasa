@@ -1,0 +1,76 @@
+@import './base.scss';
+
+.collapse {
+   width: 402px;
+   border-radius: 5px;
+}
+.collapse__header {
+   display: flex;
+   justify-content: space-between;
+   background-color: $color-primary;
+   border-radius: 5px;
+   color: $color-secondary;
+   padding-left: 1vw;
+   align-items: center;
+   height: 52px;
+}
+.collapse__header__logo {
+   width: 24px;
+   height: 13px;
+   align-self: center;
+   margin-right: 2vw;
+   cursor: pointer;
+}
+.collapse__txt {
+   color: $color-primary;
+   background-color: $color-collapse-txt-background;
+   border-radius: 0 0 5px 5px;
+   max-height: 0;
+   opacity: 0;
+   overflow: hidden;
+   transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+.collapse__txt__p {
+   margin-left: 4%;
+   margin-right: 4%;
+}
+.collapse__txt__open {
+   max-height: 100%; /* Ajustez la hauteur maximale selon vos besoins */
+   opacity: 1;
+}
+.collapse__txt__close {
+   max-height: 0;
+   opacity: 0;
+}
+
+@keyframes rotate {
+   0% {
+      transform: rotate(0deg);
+   }
+   50% {
+      transform: rotate(-85deg);
+   }
+   100% {
+      transform: rotate(-180deg);
+   }
+}
+.rotate {
+   animation: rotate 0.5s steps(4) forwards;
+   transform-origin: center;
+}
+
+@keyframes rotateReverse {
+   0% {
+      transform: rotate(-180deg);
+   }
+   50% {
+      transform: rotate(-85deg);
+   }
+   100% {
+      transform: rotate(0);
+   }
+}
+.rotateReverse {
+   animation: rotateReverse 0.5s steps(4) forwards;
+   transform-origin: center;
+}
