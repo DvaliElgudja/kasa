@@ -26,6 +26,11 @@
    left: 52%;
    transform: translate(-50%, 135%);
    color: $color-secondary;
+   font-size: 2.5rem;
+
+   @media screen and (max-width: 768px) {
+      font-size: 2rem;  // reduce the font size
+   }
 }
 
 .home {
@@ -41,6 +46,14 @@
    grid-template-columns: 1fr 1fr 1fr;
    background-color: $color-collapse-txt-background;
    border-radius: 25px;
+
+   @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;  // one column on small screens
+   }
+
+   @media screen and (min-width: 769px) and (max-width: 1024px) {
+      grid-template-columns: 1fr 1fr;  // two columns on medium screens
+   }
 }
 .home__gallery-grid__img {
    width: 100%;

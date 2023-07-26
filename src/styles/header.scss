@@ -20,17 +20,24 @@ nav {
    display: flex;
    justify-content: space-between;
    width: 24.919vw;
+
+   @media screen and (max-width: 768px) {
+      flex-direction: column;  // stack the links vertically
+      align-items: center;  // center the links
+      width: 100%;  // take up the full width of the nav bar
+   }
 }
-.nav__ul__acceuil {
-   color: $color-primary;
-   text-decoration: none;
-   font-size: 1.5em;
-}
+.nav__ul__acceuil,
 .nav__ul__about {
    color: $color-primary;
    text-decoration: none;
    font-size: 1.5em;
+
+   @media screen and (max-width: 768px) {
+      font-size: 1.2em;  // reduce the font size
+   }
 }
+
 .nav__ul a {
    text-decoration: none;
    color: inherit;
