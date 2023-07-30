@@ -5,33 +5,43 @@
    align-items: center;
    flex-direction: column;
    margin-bottom: 4%;
+   position: relative; /* Ajouté pour permettre un positionnement absolu des enfants */
 }
+
 .home__banner__img {
    width: 86vw;
    position: relative;
 }
+
 .home__banner img {
    object-fit: cover;
    height: 100%;
    width: 100%;
 }
+
 .home__banner__text__container {
-   position: absolute;
-   text-align: center;
-   width: 100%;
+   position: absolute;  /* Positionnement absolu par rapport à .home__banner */
+   top: 0;              /* Aligné avec le haut du conteneur */
+   left: 0;             /* Aligné avec la gauche du conteneur */
+   height: 100%;        /* Hauteur complète du conteneur */
+   width: 100%;         /* Largeur complète du conteneur */
+   display: flex;       /* Utiliser Flexbox */
+   align-items: center; /* Centrer verticalement */
+   justify-content: center; /* Centrer horizontalement */
+   text-align: center;  /* Centrer le texte lui-même */
+   padding-right: 0 2rem;     /* Ajouter un padding pour éviter que le texte ne touche les bords */
 }
+
 .home__banner__text__container__h2 {
-   position: absolute;
-   top: 65%;
-   left: 52%;
-   transform: translate(-50%, 135%);
    color: $color-secondary;
    font-size: 2.5rem;
+   word-wrap: break-word; /* Si le texte est trop long, il passe à la ligne suivante */
 
    @media screen and (max-width: 768px) {
-      font-size: 2rem;  // reduce the font size
+      font-size: 1rem; /* Réduire la taille de la police sur les petits écrans */
    }
 }
+
 
 .home {
    display: grid;
@@ -46,6 +56,7 @@
    grid-template-columns: 1fr 1fr 1fr;
    background-color: $color-collapse-txt-background;
    border-radius: 25px;
+   padding-top: 2%;
 
    @media screen and (max-width: 768px) {
       grid-template-columns: 1fr;  // one column on small screens
@@ -64,7 +75,8 @@ figure {
    color: $color-secondary;
    border-radius: 5px;
    position: relative;
-   height: 80%;
+   height: 85%;
+
 }
 figure img {
    border-radius: 5px;

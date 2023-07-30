@@ -37,6 +37,16 @@
    right: 1.5vw;
 }
 
+@media (max-width: 768px) {
+   .arrow-left,
+   .arrow-right {
+     // Changez les valeurs ci-dessous selon vos besoins
+     width: 20px;
+     height: 20px;
+   }
+ }
+ 
+
 .logement__carousel__index {
    position: absolute;
    color: #fff;
@@ -60,18 +70,9 @@
 }
 .logement__container__header__title h2 {
    font-size: 2.25vw;
-
-   @media screen and (max-width: 768px) {
-      font-size: 3vw;  // adjust as necessary
-   }
 }
-
 .logement__container__header__title h3 {
    font-size: 1.25vw;
-
-   @media screen and (max-width: 768px) {
-      font-size: 2vw;  // adjust as necessary
-   }
 }
 
 .logement__container__header__tags {
@@ -159,29 +160,4 @@
 }
 .logement__collapse__equipement__ul {
    list-style-type: none;
-}
-
-@media screen and (max-width: 768px) {
-   .logement__container {
-      flex-direction: column;
-      align-items: center;
-   }
-
-   .logement__container__header {
-      width: 80vw; // adjust as necessary
-   }
-
-   .logement__container__aside {
-      align-items: center;
-   }
-
-   .logement__collapse {
-      flex-direction: column;
-      align-items: center;
-   }
-
-   .logement__collapse__description,
-   .logement__collapse__equipement {
-      width: 80vw; // adjust as necessary
-   }
 }
