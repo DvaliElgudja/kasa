@@ -12,7 +12,7 @@ function Home() {
             </div>
             <div className="home__banner__text__container">
                <h2 className="home__banner__text__container__h2">
-                  Chez vous, partout et ailleurs
+               Chez vous,<span className="responsive-break"></span> partout et ailleurs
                </h2>
             </div>
          </div>

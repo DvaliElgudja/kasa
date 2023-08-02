@@ -5,42 +5,78 @@
    align-items: center;
    flex-direction: column;
    margin-bottom: 4%;
-   position: relative; /* Ajouté pour permettre un positionnement absolu des enfants */
+   position: relative;
+
+   @media screen and (max-width: 768px) {
+      height: 100px; // Adjust to your preferred height
+      border-radius: 5px; // Add border-radius
+   }
 }
 
 .home__banner__img {
    width: 86%;
    position: relative;
+   border-radius: 5px; // Add border-radius
+
+   @media screen and (max-width: 768px) {
+      height: 100px;
+   }
 }
 
 .home__banner img {
    object-fit: cover;
    height: 100%;
    width: 100%;
+   border-radius: 5px; // Add border-radius
+
+   @media screen and (max-width: 768px) {
+      height: 100%;
+      object-fit: cover;
+   }
 }
 
 .home__banner__text__container {
-   position: absolute;  /* Positionnement absolu par rapport à .home__banner */
-   top: 0;              /* Aligné avec le haut du conteneur */
-   left: 0;             /* Aligné avec la gauche du conteneur */
-   height: 100%;        /* Hauteur complète du conteneur */
-   width: 100%;         /* Largeur complète du conteneur */
-   display: flex;       /* Utiliser Flexbox */
-   align-items: center; /* Centrer verticalement */
-   justify-content: center; /* Centrer horizontalement */
-   text-align: center;  /* Centrer le texte lui-même */
-   padding-right: 0 2rem;     /* Ajouter un padding pour éviter que le texte ne touche les bords */
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   padding: 0 2rem;
+
+   @media screen and (max-width: 768px) {
+      justify-content: flex-start; // Align to the left on small screens
+      text-align: left;
+   }
 }
 
 .home__banner__text__container__h2 {
    color: $color-secondary;
    font-size: 2.5rem;
-   word-wrap: break-word; /* Si le texte est trop long, il passe à la ligne suivante */
+   word-wrap: break-word;
+
+   .responsive-break {
+      display: none;
+
+      @media screen and (max-width: 768px) {
+         display: block;
+         content: "";
+         width: 0;
+         height: 0;
+      }
+   }
 
    @media screen and (max-width: 768px) {
-      font-size: 1rem; /* Réduire la taille de la police sur les petits écrans */
+      font-size: 1.4rem; // Reduce font size on small screens
+      padding-left: 0.5rem;
    }
 }
+
+
+
 
 
 .home {
