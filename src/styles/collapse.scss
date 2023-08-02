@@ -1,12 +1,12 @@
 @import './base.scss';
 
 .collapse {
-  width: 90%;  // or you can use something like 80vw
+  width: 90%;  // or you can use something like 80%
   max-width: 402px;  // to ensure it doesn't get too wide on large screens
   border-radius: 5px;
 
   @media screen and (max-width: 768px) {
-    width: 100%;  // or 95vw, etc., depending on your design
+    width: 100%;  // or 95%, etc., depending on your design
   }
 }
 .collapse__header {
@@ -15,7 +15,7 @@
    background-color: $color-primary;
    border-radius: 5px;
    color: $color-secondary;
-   padding-left: 1vw;
+   padding-left: 1%;
    align-items: center;
    height: 52px;
 }
@@ -23,7 +23,7 @@
    width: 24px;
    height: 13px;
    align-self: center;
-   margin-right: 2vw;
+   margin-right: 2%;
    cursor: pointer;
 }
 .collapse__txt {
