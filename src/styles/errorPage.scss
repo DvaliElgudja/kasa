@@ -1,0 +1,38 @@
+@import './base.scss';
+
+.errorPage__img404 img {
+    width: 100%;  /* Adjust this value to make the image smaller or larger */
+}
+
+
+.errorPage{
+    display: flex;
+    justify-content: center;
+    margin: 8%;
+}
+
+.errorPage__h3{
+    color: $color-primary;
+    display: flex;
+    justify-content: center;
+    margin: 12%;
+    white-space: nowrap;
+}
+
+.errorPage__ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.errorPage__ul__acceuil{
+    color: $color-primary;
+    text-decoration: none;
+    
+}
+
+.errorPage__ul a {
+    text-decoration: underline;
+    color: $color-primary;
+ }

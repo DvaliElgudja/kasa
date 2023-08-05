@@ -4,17 +4,17 @@ $color-collapse-txt-background: #f6f6f6;
 
 p, h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 18px; // default font size for larger screens
+  // font-size: 18px; // default font size for larger screens
 
-  @media screen and (max-width: 1200px) {
-    font-size: 16px; // font size for screens up to 1200px wide
-  }
+  // @media screen and (max-width: 1200px) {
+  //   font-size: 16px; // font size for screens up to 1200px wide
+  // }
 
-  @media screen and (max-width: 992px) {
-    font-size: 14px; // font size for screens up to 992px wide
-  }
+  // @media screen and (max-width: 992px) {
+  //   font-size: 14px; // font size for screens up to 992px wide
+  // }
 
-  @media screen and (max-width: 768px) {
-    font-size: 12px; // font size for screens up to 768px wide
-  }
+  // @media screen and (max-width: 768px) {
+  //   font-size: 12px; // font size for screens up to 768px wide
+  // }
 }

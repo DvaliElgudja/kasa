@@ -17,6 +17,7 @@ function RouteConfig() {
                <Route path="/" element={<Home />} />
                <Route path="/About" element={<About />} />
                <Route path="/housing/:id" element={<Logement data={data} />} />
+               
                <Route path="*" element={<ErrorPage />} />
             </Routes>
             <Footer />
