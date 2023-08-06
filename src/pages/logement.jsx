@@ -1,4 +1,5 @@
-import { useParams } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import Collapse from '../components/collapse';
 import Carousel from '../components/carousel';
 import starActive from '../asset/star-active.png';
@@ -6,8 +7,18 @@ import starDisabled from '../asset/starDiasabled.png';
 
 function Logement({ data }) {
    const { id } = useParams();
+   const navigate = useNavigate();
    let result = data.find((item) => item.id === id);
-   console.log(result);
+
+   useEffect(() => {
+       if (!result) {
+           navigate('/Error404');
+       }
+   }, [result, navigate]);
+
+   if (!result) return null; // Return null if result is not found to prevent further rendering
+
+
    const [firstName, lastName] = result.host.name.split(' ');
    let starRating = parseInt(result.rating);
    let starDiasabledCount = 5 - starRating;
@@ -100,3 +111,5 @@ function Logement({ data }) {
    );
 }
 export default Logement;
+
+// ______________________________________

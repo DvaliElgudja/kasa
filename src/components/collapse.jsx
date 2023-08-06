@@ -25,6 +25,18 @@ function Collapse({ title, text, collapseClass, textClass }) {
       return '';
    };
 
+//    const getAnimationClass = () => {
+//       switch (ClikCount % 3) {
+//           case 1:
+//               return 'rotate';
+//           case 2:
+//               return 'rotateReverse';
+//           default:
+//               return '';
+//       }
+//   };
+  
+
    return (
       <div className={`collapse ${collapseClass}`}>
          <div className="collapse__header">
@@ -42,7 +54,7 @@ function Collapse({ title, text, collapseClass, textClass }) {
                CollapseOpen ? 'collapse__txt__open' : 'collapse__txt__close'
             }`}
          >
-            <p className="collapse__txt__p">{text}</p>
+            <div className="collapse__txt__p">{text}</div>
          </div>
       </div>
    );
