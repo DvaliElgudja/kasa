@@ -60,3 +60,48 @@ function About(data) {
    );
 }
 export default About;
+
+
+
+
+
+
+
+// passons en revue ce code :
+
+// javascript
+// Copy code
+// import Collapse from '../components/collapse.jsx';
+// import aboutImg from '../asset/about__img.png';
+// Imports:
+
+// Collapse: On importe le composant Collapse depuis le fichier collapse.jsx dans le répertoire components. Ce composant est probablement une structure d'élément rétractable/expansible qui affiche le titre et le texte qu'il reçoit en tant que props.
+// aboutImg: C'est l'importation d'une image depuis le dossier asset. Cette image sera utilisée plus loin dans le code pour être affichée dans la partie "À propos" (About).
+// Déclaration de données:
+
+// javascript
+// Copy code
+// let collapse__text = [ ... ];
+// C'est un tableau d'objets qui contient des informations (titre et texte) qui seront passées au composant Collapse. Chaque objet représente une section distincte de l'élément rétractable.
+
+// Composant About:
+// javascript
+// Copy code
+// function About(data) {
+//    return ( ... );
+// }
+// C'est le composant fonctionnel About. Lorsqu'il est rendu, il affiche plusieurs éléments :
+
+// Une div avec une image (aboutImg). Cette image représente probablement un visuel de fond ou une image représentative pour la page "À propos".
+
+// Une autre div (about__main) qui contient quatre instances du composant Collapse. Chaque instance reçoit des propriétés spécifiques (title, text, collapseClass, textClass) extraites du tableau collapse__text. Ces propriétés permettent d'ajuster le titre, le texte et les classes CSS de chaque instance Collapse.
+
+// À noter : La manière dont les données sont passées au composant Collapse est assez répétitive. Pour de plus grands ensembles de données, ou si ce modèle est susceptible de changer souvent, une boucle ou une méthode de cartographie serait préférable pour générer ces composants.
+
+// Exportation:
+// javascript
+// Copy code
+// export default About;
+// Le composant About est exporté pour être utilisé dans d'autres parties de l'application.
+
+// Résumé: Le code définit un composant About qui rend une image et quatre sections rétractables/expansibles avec différents titres et textes. Ces sections sont gérées par le composant Collapse qui est alimenté par des données définies dans le tableau collapse__text.

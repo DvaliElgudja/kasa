@@ -113,3 +113,43 @@ function Logement({ data }) {
 export default Logement;
 
 // ______________________________________
+
+
+
+// Ce code présente le composant Logement qui est probablement utilisé pour afficher les détails d'un logement spécifique. Explorons le pas à pas :
+
+// Imports:
+
+// React, { useEffect }: Importe React et le hook useEffect.
+// useParams, useNavigate: Deux hooks de react-router-dom. useParams récupère les paramètres de l'URL, tandis que useNavigate fournit une fonction pour naviguer programmativement.
+// Divers composants et actifs: Le code importe des composants Collapse et Carousel, ainsi que des images pour les étoiles de notation.
+// Décomposition et Logique du Composant:
+
+// const { id } = useParams();: Récupère l'identifiant du logement de l'URL.
+
+// const navigate = useNavigate();: Obtient la fonction navigate pour naviguer vers d'autres routes.
+
+// let result = data.find((item) => item.id === id);: Cherche dans les données le logement correspondant à l'ID récupéré.
+
+// L'effet (useEffect) vérifie si le logement avec l'ID spécifié a été trouvé. Si ce n'est pas le cas, l'utilisateur est redirigé vers une page d'erreur /Error404.
+
+// if (!result) return null;: Si result est nul, le rendu est interrompu pour éviter les erreurs.
+
+// Affichage des Étoiles de Notation:
+
+// L'étoile active est affichée pour le nombre de fois égal à la note du logement.
+
+// L'étoile désactivée est affichée pour combler la différence jusqu'à 5 étoiles.
+
+// Rendu JSX:
+
+// Le code affiche un carrousel, probablement d'images liées au logement.
+
+// Il y a une structure pour le titre, l'emplacement, les tags, l'image de l'hôte, son nom, et la notation par étoiles.
+
+// Deux composants Collapse sont utilisés pour afficher la description et les équipements du logement.
+
+// Exportation:
+
+// Le composant Logement est exporté pour être utilisé dans d'autres parties de l'application.
+// Résumé: Le composant Logement récupère l'ID d'un logement de l'URL, trouve le logement correspondant dans les données fournies, et rend les détails du logement, y compris un carrousel, la description, les équipements, et une notation par étoiles. Si un logement avec l'ID donné n'est pas trouvé, l'utilisateur est redirigé vers une page d'erreur.

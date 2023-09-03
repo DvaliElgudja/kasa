@@ -37,6 +37,27 @@
    right: 1.5vw;
 }
 
+@media (max-width: 768px) {
+   .arrow-left, .arrow-right {
+       width: 30px; 
+       height: 40px; 
+   }
+}
+
+/* Media query for screens with a max width of 480px (typical breakpoint for mobile phones) */
+@media (max-width: 480px) {
+   .arrow-left, .arrow-right {
+       width: 20px; 
+       height: 30px; 
+   }
+}
+
+
+
+
+
+
+
 .logement__carousel__index {
    position: absolute;
    color: #fff;
@@ -120,6 +141,20 @@
    display: flex;
    align-self: center;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .starActive {
    // height: 36px;
    object-fit: cover;
