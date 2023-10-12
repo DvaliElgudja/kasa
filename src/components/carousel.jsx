@@ -26,12 +26,14 @@ const Carousel = ({ array }) => {
             src={logoSlide}
             alt="arrow-right"
             className="arrow-right"
+            style={{ display: array.pictures.length <= 1 ? 'none' : 'block' }}
          />
          <img
             onClick={goToPreviousSlide}
             src={logoSlide}
             alt="arrow-left"
             className="arrow-left"
+            style={{ display: array.pictures.length <= 1 ? 'none' : 'block' }}
          />
          <p className="logement__carousel__index">
             {`${activeSlide + 1}/ ${array.pictures.length}`}

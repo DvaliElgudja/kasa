@@ -3,22 +3,22 @@ import logoVector from '../asset/Vector.png';
 
 function Collapse({ title, text, collapseClass, textClass }) {
    const [CollapseOpen, setCollapseOpen] = useState(false);
-   let [ClikCount, setClickCount] = useState(0);
+   let [ClickCount, setClickCount] = useState(0);
 
    const handleToggleCollapse = () => {
       setCollapseOpen(!CollapseOpen);
-      setClickCount(ClikCount + 1);
+      setClickCount(ClickCount + 1);
    };
 
    const getAnimationClass = () => {
-      if (ClikCount === 1) {
+      if (ClickCount === 1) {
          console.log(1);
          return 'rotate';
-      } else if (ClikCount === 2) {
+      } else if (ClickCount === 2) {
          console.log(2);
          return 'rotateReverse';
-      } else if (ClikCount === 3) {
-         setClickCount((ClikCount = 1));
+      } else if (ClickCount === 3) {
+         setClickCount((ClickCount = 1));
          console.log(3);
          return '';
       }
@@ -26,7 +26,7 @@ function Collapse({ title, text, collapseClass, textClass }) {
    };
 
 //    const getAnimationClass = () => {
-//       switch (ClikCount % 3) {
+//       switch (ClickCount % 3) {
 //           case 1:
 //               return 'rotate';
 //           case 2:
@@ -86,11 +86,11 @@ export default Collapse;
 
 // CollapseOpen: Un état booléen pour suivre si le contenu est actuellement affiché ou masqué.
 
-// ClikCount: Un état qui compte le nombre de fois que l'utilisateur a cliqué sur l'icône.
+// ClickCount: Un état qui compte le nombre de fois que l'utilisateur a cliqué sur l'icône.
 
-// handleToggleCollapse: Une fonction qui inverse l'état de CollapseOpen chaque fois qu'elle est appelée, et incrémente également ClikCount.
+// handleToggleCollapse: Une fonction qui inverse l'état de CollapseOpen chaque fois qu'elle est appelée, et incrémente également ClickCount.
 
-// getAnimationClass: Cette fonction détermine la classe d'animation à appliquer à l'icône en fonction de la valeur de ClikCount. Le code original envisage trois états (rotate, rotateReverse et ''), et remet à zéro le compteur après trois clics. Une version optimisée de cette fonction est également proposée en commentaires, qui utilise l'opérateur modulo % pour déterminer l'état de rotation sans avoir besoin de remettre le compteur à zéro.
+// getAnimationClass: Cette fonction détermine la classe d'animation à appliquer à l'icône en fonction de la valeur de ClickCount. Le code original envisage trois états (rotate, rotateReverse et ''), et remet à zéro le compteur après trois clics. Une version optimisée de cette fonction est également proposée en commentaires, qui utilise l'opérateur modulo % pour déterminer l'état de rotation sans avoir besoin de remettre le compteur à zéro.
 
 // Rendu JSX:
 
